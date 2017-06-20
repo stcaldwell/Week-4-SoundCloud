@@ -1,0 +1,30 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #60d9f1;
+}
+
+#tracks {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: auto;
+  width: 90vw;
+}
+
+.track-img-title-band {
+  width: 15vw;
+  /*margin: auto;*/
+}
+
+#bands {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: auto;
+  width: 90vw;
+}
+
+.bands-img {
+  width: 10vw;
+}
