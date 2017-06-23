@@ -23,11 +23,13 @@ let audio = document.getElementById('track-player');
 
 button.onclick = search;
 
-
+searchBar.focus();
 
 function search() {
 tracks();
 users();
+container.classList.add("reveal");
+
 }
 
 function tracks() {
@@ -52,16 +54,22 @@ function tracks() {
 
          let markup = `
           <div class="track-img-title-band">
-            <img src="${title[i].user.avatar_url}">
+            <img src="${title[i].user.avatar_url}" class="track-img">
+            <button id="listen" value= "${title[i].stream_url}">Listen!</button>
             <p class="tracks">${title[i].title}</p>
             <p class="bandName">${title[i].user.username}</p>
-            <button id="listen" value= "${title[i].stream_url}">Listen!</button>
-          </div>
-         `
+            `
 
          document.getElementById("tracks").innerHTML += markup;
 
        }
+
+       document.getElementById('tracks-header').innerHTML = "";
+
+       let markupTrackHeader = `
+        <h2>Tracks</h2>
+      `
+        document.getElementById('tracks-header').innerHTML += markupTrackHeader;
 
          document.getElementById('tracks').addEventListener('click', function(e) {
            if(e.target && e.target.id == 'listen') {
@@ -70,6 +78,7 @@ function tracks() {
              audio.removeAttribute('src');
              audio.setAttribute('src', url);
              audio.setAttribute('autoplay', true);
+             audio.classList.add("reveal");
          }
 
        })
@@ -102,19 +111,25 @@ function users() {
 
          let markup = `
          <div class="band-img">
-           <img src="${users[i].avatar_url}">
+           <img src="${users[i].avatar_url}" class="artist-img">
            <p class="bands">${users[i].username}</p>
+           <a href="${users[i].permalink_url}">Check Them Out!</a>
          </div>
 
          `
          document.getElementById("bands").innerHTML += markup;
 
+
        }
 
+       document.getElementById("artists-header").innerHTML = "";
+
+       let markupArtistsHeader = `
+        <h2>Artists</h2>
+      `
+        document.getElementById('artists-header').innerHTML += markupArtistsHeader;
+
        })
-
-
-
 
 }
 )
