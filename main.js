@@ -20,6 +20,7 @@
 var button = document.getElementById('button');
 var searchBar = document.getElementById('searchBar');
 let audio = document.getElementById('track-player');
+// let container = document.getElementsByClassName('container');
 
 button.onclick = search;
 
@@ -28,7 +29,7 @@ searchBar.focus();
 function search() {
 tracks();
 users();
-container.classList.add("reveal");
+// container.classList.add("reveal");
 
 }
 

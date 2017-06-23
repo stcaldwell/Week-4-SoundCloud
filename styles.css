@@ -9,9 +9,9 @@ body {
 
 /*.container{
   background-color: inherit;
-}*/
+}
 
-/*.container.reveal{
+.container.reveal{
   background: linear-gradient(to top, red, yellow);
   height: 100vw;
 }*/
@@ -38,7 +38,47 @@ h1 {
 .player {
   display: flex;
   justify-content: center;
-  padding: 5% 0 8% 0;
+  /*padding: 5% 0 8% 0;*/
+  width: 350px; height: 120px;
+
+	background: #f2f9fe;
+	background: linear-gradient(top, #f2f9fe 5%, d6f0fd 100%);
+	background: -webkit-linear-gradient(top, #f2f9fe 5%, d6f0fd 100%);
+	background: -moz-linear-gradient(top, #f2f9fe 5%, d6f0fd 100%);
+	background: -ms-linear-gradient(top, #f2f9fe 5%, d6f0fd 100%);
+	background: -o-linear-gradient(top, #f2f9fe 5%, d6f0fd 100%);
+
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+
+	position: relative;
+	margin: 120px auto 20px;
+}
+
+.player:after, .player:before {
+	content: '';
+	position: absolute;
+	background: #f2f9fe;
+	z-index: -1
+}
+
+.player:after {
+	width: 100px; height: 100px;
+	top: -50px; left: 50px;
+
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+}
+
+.player:before {
+	width: 180px; height: 180px;
+	top: -90px; right: 50px;
+
+	border-radius: 200px;
+	-webkit-border-radius: 200px;
+	-moz-border-radius: 200px;
 }
 
 #track-player{
