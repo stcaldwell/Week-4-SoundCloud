@@ -20,11 +20,20 @@
 var button = document.getElementById('button');
 var searchBar = document.getElementById('searchBar');
 let audio = document.getElementById('track-player');
-// let container = document.getElementsByClassName('container');
+
+
 
 button.onclick = search;
+searchBar.onkeypress = search;
 
 searchBar.focus();
+
+document.addEventListener("keypress", function(e){
+  let key = e.which || e.keyCode;
+  if (key === 13) {
+    search();
+  }
+});
 
 function search() {
 tracks();

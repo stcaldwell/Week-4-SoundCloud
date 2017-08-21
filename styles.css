@@ -1,20 +1,18 @@
 *, *:before, *:after {
   box-sizing: border-box;
+
+}
+
+html {
+  min-height: 100vw;
 }
 
 body {
   background: linear-gradient(to top, red, yellow);
-  height: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
 }
-
-/*.container{
-  background-color: inherit;
-}
-
-.container.reveal{
-  background: linear-gradient(to top, red, yellow);
-  height: 100vw;
-}*/
 
 /*Audio Player*/
 
@@ -121,6 +119,7 @@ h1 {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin: auto;
   width: 90vw;
+  background-color: inherit;
 }
 
 .track-img-title-band {
@@ -144,6 +143,7 @@ h1 {
 
 #bands {
   display: grid;
+  background-color: inherit;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin: auto;
   width: 90vw;
